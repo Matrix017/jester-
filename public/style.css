@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+body {
+    background-image: url(/images/up-modern-HNrWe1QA364-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    opacity: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter:blur(10px);
+    width: 60em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+h1{
+    font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.p , label{
+    font-family: "Gabriela", serif;
+   
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1em;
+    
+} 
+label{
+    margin-right: 0.5em;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    
+    background-color: cornsilk;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: fit-content;
+    min-width: 30em;
+    margin-top: 3em;
+    min-height: 5em;
+    margin-bottom: 0%;
+    padding: 0%;
+}
+
+select{
+    background-color: rgba(0, 0, 0, 0.349);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 1em;
+    color: white;
+  
+    
+}
+
+select>option{
+  
+    background-color:#ff0000bd;
+    color:white;
+    padding: 3px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button{
+    background-color: #3a993e;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+    color: white;
+    border: 1px solid #ccc;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+    
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+.card>p{
+    color: black;
+    font-family: "Gabriela", serif;
+    font-weight:lighter;
+    font-style: normal;
+} 
+
+#joke{
+    font-size: 1em;
+    font-family: "Gabriela", serif;
+    font-weight: normal;
+    margin: 0%;
+}
+#category{
+    font-size: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    margin: 0%;
+}

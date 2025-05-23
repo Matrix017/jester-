@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jester</title>
+</head>
+<body>
+  
+<div class="container">
+      <h1>Jester.</h1>
+    <form action="/newjoke" method="post">
+    <label for="select">choose a category:</label>
+    <select name="categories" id="select">
+    <option value="any">any</option>
+    <option value="misc">misc</option>
+    <option value="programming">programming</option>
+    <option value="dark">dark</option>
+    <option value="pun">pun</option>
+    <option value="spooky">spooky</option>
+    <option value="christmas">christmas</option>
+    </select>
+  <button type="submit">submit</button>   
+  </form> 
+ 
+<div class="card">
+    <% if (error===true) { %>
+        <p>there seems to be an error please resubmit</p>
+     <% } else { %>
+         
+     %>
+     <p id="joke"><%= jokes %></p>
+    <p id="category">:<%= category %></p>
+     <% } %>
+</div>
+
+
+ </p>
+</div>
+
+</body>
+</html>
