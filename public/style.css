@@ -1,11 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
+@media screen and (max-width:600px){
+    .container{
+        padding:1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       height:max-content; 
+        
+    }
+    form{
+        padding: 2em;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        gap: 0.8em;  
+
+    }
+    body{
+        height: 100dvh;
+    }
+card{
+    height: min-content;
+}
+    
+}
+
 body {
     background-image: url(/images/up-modern-HNrWe1QA364-unsplash.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    height: 100vh;
+    height:100dvh;
     opacity: 90%;
     display: flex;
     justify-content: center;
@@ -19,12 +47,14 @@ body {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter:blur(10px);
     width: 60em;
-    height: 20em;
+    min-height: 20em;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    padding: min(2em, 8%);
 
 }
 h1{
@@ -65,11 +95,11 @@ form{
     align-items: flex-start;
     justify-content: space-between;
     max-width: fit-content;
-    min-width: 30em;
-    margin-top: 3em;
-    min-height: 5em;
-    margin-bottom: 0%;
-    padding: 0%;
+    width:calc(1em+10vh);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    font-size:clamp(5vw, 1rem, 2rem);
 }
 
 select{
@@ -87,7 +117,7 @@ select>option{
   
     background-color:#ff0000bd;
     color:white;
-    padding: 3px;
+    padding: 2em;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -129,13 +159,13 @@ button:hover {
 } 
 
 #joke{
-    font-size: 1em;
+    font-size: 1rem;
     font-family: "Gabriela", serif;
     font-weight: normal;
     margin: 0%;
 }
 #category{
-    font-size: 1em;
+    font-size: 1rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     margin: 0%;

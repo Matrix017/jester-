@@ -4,7 +4,7 @@ import bodyparser from "body-parser";
 
 const app = express();
 const PORT = 3000;
-const API_URL = "https://v2.jokeapi.dev/joke/Any?type=single&?blacklistFlags=nsfw,racist,sexist,explicit& ?format=json"; // Replace with your API URl
+const API_URL = "https://v2.jokeapi.dev/joke/Any?type=single&?blacklistFlags=nsfw,religious,explicit& ?format=json"; // Replace with your API URl
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -34,12 +34,14 @@ app.post("/newjoke", async (req, res) => {
         const value = req.body.categories;
         console.log(value);
         // const result = await axios.get(`https://v2.jokeapi.dev/joke/${value}?type=single&blacklist
-       const result = await axios.get(`https://v2.jokeapi.dev/joke/${value}?type=single&blacklistFlags=nsfw,racist,sexist,explicit&format=json`);
+       const result = await axios.get(`https://v2.jokeapi.dev/joke/${value}?type=single&blacklistFlags=nsfw,religious,sexist,explicit&format=json`);
         const finaljoke = result.data.joke;
         const category= result.data.category;
         console.log(finaljoke);
-        res.render("index.ejs",{jokes:finaljoke,category:category,error:null});
-    } catch (error) {
+        res.render("index.ejs",{jokes:finaljoke,category:category,error:null ,message:null});
+      }
+    
+    catch (error){ 
         console.error("Error fetching data from API:", error);
         res.status(500).render("index.ejs",{error:"Error fetching data from API",jokes:null,category:null});
     }
