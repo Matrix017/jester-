@@ -48,7 +48,7 @@ body {
     backdrop-filter:blur(10px);
     width: 60em;
     min-height: 20em;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +64,14 @@ h1{
   font-style: normal;
   font-size: 3em;
   text-decoration: underline;
+}
+h2{
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    
 }
 
 .p , label{
